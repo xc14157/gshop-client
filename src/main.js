@@ -1,8 +1,13 @@
+/**
+ * 入口js
+ */
 import Vue from 'vue'
 import App from './App.vue'
-
-Vue.config.productionTip = false
+//引入路由 引入之后会多两个组件标签 router-link router-view
+import router from './router'
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+    el: '#app',
+    router,
+    render: h => h(App)
+})
